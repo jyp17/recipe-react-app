@@ -1,0 +1,17 @@
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    border-radius: 7px;
+    border-color: darkgrey;
+    padding: 5px;
+}
+
+.bi-arrow-left {
+    cursor: pointer;
+    color: skyblue;
+}
+
+.bi-arrow-left:hover {
+    color: steelblue;
+}
