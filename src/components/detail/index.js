@@ -40,19 +40,23 @@ const DetailComponent = () => {
     return (
         <div className="container-md mt-5 mb-4">
             <h2 className="mb-2">{recipe.title}</h2>
-            <div className="d-flex">
-                <img className="me-5 recipe-image border border-2 rounded-3" src={recipe.image} />
-                <div className="ms-5 card border-info">
-                    <div className="card-header bg-info text-light fw-bold">Recipe Breakdown</div>
-                    <div className="card-body ps-5 pe-5 ">
-                        <div className="card-text">
-                            <span className="fw-bold">Cooking Time:</span> {recipe.readyInMinutes} minutes <br/>
-                            <span className="fw-bold">Servings:</span> {recipe.servings}<br/>
-                            <span className="fw-bold">Dairy Free:</span> {recipe.dairyFree? 'Yes' : 'No'}<br/>
-                            <span className="fw-bold">Gluten Free:</span> {recipe.glutenFree? 'Yes' : 'No'}<br/>
-                            <span className="fw-bold">Ketogenic:</span> {recipe.ketogenic? 'Yes' : 'No'}<br/>
-                            <span className="fw-bold">Vegetarian:</span> {recipe.vegetarian? 'Yes' : 'No'}<br/>
-                            <span className="fw-bold">Vegan:</span> {recipe.vegan? 'Yes' : 'No'}<br/>
+            <div className="row">
+                <div className="col-sm-12 col-md-7 col-lg-6 col-xl-5">
+                    <img className="recipe-image border border-2 rounded-3" src={recipe.image} />
+                </div>
+                <div className="col-sm-9 col-md-5 col-lg-6 col-xl-5 align-self-center">
+                    <div className="card border-info">
+                        <div className="card-header bg-info text-light fw-bold">Recipe Breakdown</div>
+                        <div className="card-body ps-5 pe-5 ">
+                            <div className="card-text">
+                                <span className="fw-bold">Cooking Time:</span> {recipe.readyInMinutes} minutes <br/>
+                                <span className="fw-bold">Servings:</span> {recipe.servings}<br/>
+                                <span className="fw-bold">Dairy Free:</span> {recipe.dairyFree? 'Yes' : 'No'}<br/>
+                                <span className="fw-bold">Gluten Free:</span> {recipe.glutenFree? 'Yes' : 'No'}<br/>
+                                <span className="fw-bold">Ketogenic:</span> {recipe.ketogenic? 'Yes' : 'No'}<br/>
+                                <span className="fw-bold">Vegetarian:</span> {recipe.vegetarian? 'Yes' : 'No'}<br/>
+                                <span className="fw-bold">Vegan:</span> {recipe.vegan? 'Yes' : 'No'}<br/>
+                            </div>
                         </div>
                     </div>
                 </div>

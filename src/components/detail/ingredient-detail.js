@@ -28,7 +28,7 @@ const IngredientDetail = () => {
             {ingredient != undefined &&
                 <div>
                     <div className="row">
-                        <div className="col-4 m-3">
+                        <div className="col-lg-4 m-3">
                             <img className="border border-2 rounded-3 p-2" src={`https://spoonacular.com/cdn/ingredients_250x250/${ingredient.image}`} />
                         </div>
                         <div className="col m-3 align-self-center">

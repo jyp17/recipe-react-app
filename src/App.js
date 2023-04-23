@@ -13,15 +13,18 @@ import authReducer from "./components/authentication/auth-reducer";
 import commentReducer from "./components/comments/comment-reducer";
 import bookmarkReducer from "./components/bookmarks/bookmark-reducer";
 import usersReducer from "./components/admin/usersReducer";
+import followReducer from "./components/profile/follow-reducer";
 import {configureStore} from "@reduxjs/toolkit";
 import NavigationComponent from "./components/navigation";
+import FollowComponent from "./components/profile/follow-screen";
 
 const store = configureStore({
     reducer: {
         user: authReducer,
         userList: usersReducer,
         comments: commentReducer,
-        bookmarks: bookmarkReducer
+        bookmarks: bookmarkReducer,
+        follows: followReducer,
     }
 });
 
@@ -40,6 +43,8 @@ function App() {
                       <Route path="/login/" element={<LoginComponent />} />
                       <Route path="/profile/" element={<ProfileComponent />} />
                       <Route path="/profile/:uname" element={<ProfileComponent />} />
+                      <Route path="/profile/:uname/followers" element={<FollowComponent fetchUsersFollowers={true} />} />
+                      <Route path="/profile/:uname/following" element={<FollowComponent fetchUsersFollowers={false} />} />
                       <Route path="/edit-profile" element={<EditProfileComponent />} />
                       <Route path="/manage-users" element={<AdminPageComponent />}/>
                   </Routes>
